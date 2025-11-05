@@ -45,5 +45,5 @@ texture = ExtResource("3_jgoks")
 expand_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 0.2
 one_shot = true
