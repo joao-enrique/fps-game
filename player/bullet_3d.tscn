@@ -16,3 +16,5 @@ shape = SubResource("SphereShape3D_tim2h")
 
 [node name="Projetile3D" parent="." instance=ExtResource("1_hotau")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
