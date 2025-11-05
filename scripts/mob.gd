@@ -8,6 +8,8 @@ var speed = randf_range(2.0, 4.0)
 @onready var bat_model = $bat_model
 @onready var player = get_node("/root/Game/Player")
 @onready var timer = $Timer
+@onready var hurt_sound = $HurtSound
+@onready var ko_sound = $KOsound
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
@@ -19,6 +21,7 @@ func take_damage():
 	if health == 0: return
 	bat_model.hurt();
 	health -= 1 
+	hurt_sound.play()
 	
 	if health == 0:
 		set_physics_process(false)
@@ -28,6 +31,7 @@ func take_damage():
 		apply_central_impulse(direction * 10.0 + random_upward_force)
 		timer.start()
 		died.emit()
+		ko_sound.play()
 
 
 func _on_timer_timeout():

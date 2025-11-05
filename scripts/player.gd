@@ -45,3 +45,4 @@ func shoot_bullet():
 	$Camera3D/Marker3D.add_child(new_bullet)
 	new_bullet.global_transform = $Camera3D/Marker3D.global_transform
 	$Timer.start()
+	$AudioStreamPlayer.play()
