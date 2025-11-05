@@ -1,7 +1,7 @@
 <h1 align="left">🎯 FPS Survivor Arena 3D 🚀</h1>
 
 <div align="center">
-  <a href="https://jedev1.itch.io/fps-survivor-arena" target="_blank">
+  <a href="https://jedev1.itch.io/fps-game" target="_blank">
     <img src="https://i.ibb.co/PvmND5Sk/CONFIRA-O-PROJETO-AQUI-1.png" alt="Button" />
   </a>
 </div>
