@@ -8,6 +8,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_6n07f"]
 
 [node name="Mob" type="RigidBody3D"]
+collision_layer = 2
 gravity_scale = 0.0
 script = ExtResource("1_48jgm")
 

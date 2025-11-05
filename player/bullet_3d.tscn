@@ -8,6 +8,7 @@
 [node name="Bullet3D" type="Area3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 top_level = true
+collision_mask = 3
 script = ExtResource("1_l23i4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
