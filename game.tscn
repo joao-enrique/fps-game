@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnit05luth1uh"]
+[gd_scene load_steps=8 format=3 uid="uid://bnit05luth1uh"]
 
 [ext_resource type="Texture2D" uid="uid://bos7rridjkps1" path="res://level/checkboard.png" id="1_qniqt"]
 [ext_resource type="PackedScene" uid="uid://cj32i2643s1hn" path="res://player/player.tscn" id="1_v3vbw"]
 [ext_resource type="Material" uid="uid://btsa37he1fln8" path="res://level/bridge.tres" id="2_65pd7"]
 [ext_resource type="PackedScene" uid="uid://d2w1kum5dvj4o" path="res://mob/mob.tscn" id="4_buh76"]
+[ext_resource type="PackedScene" uid="uid://4oif2hv3rtec" path="res://mob/spawner/mob_spawner_3d.tscn" id="5_g6gyu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcaes"]
 albedo_color = Color(1, 0.443137, 0, 1)
@@ -215,3 +216,6 @@ environment = SubResource("Environment_jc6u4")
 
 [node name="Mob" parent="." instance=ExtResource("4_buh76")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -9)
+
+[node name="MobSpawner3D" parent="." instance=ExtResource("5_g6gyu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -47)

@@ -34,14 +34,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -41.0
-offset_right = 112.0
-offset_bottom = 113.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 49.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.551, 0.551)
 texture = ExtResource("3_jgoks")
+expand_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4
