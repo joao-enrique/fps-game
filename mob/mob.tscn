@@ -14,3 +14,9 @@ transform = Transform3D(0.671, 0, 0, 0, 0.671, 0, 0, 0, 0.671, 0, 0, 0)
 shape = SubResource("SphereShape3D_6n07f")
 
 [node name="bat_model" parent="." instance=ExtResource("1_0ws1y")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
