@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnit05luth1uh"]
+[gd_scene load_steps=10 format=3 uid="uid://bnit05luth1uh"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_kpdmy"]
 [ext_resource type="Texture2D" uid="uid://bos7rridjkps1" path="res://level/checkboard.png" id="1_qniqt"]
@@ -26,6 +26,8 @@ fog_height_density = 0.15
 font_size = 50
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_v70ln"]
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_kpdmy")
@@ -233,4 +235,12 @@ offset_bottom = 97.0
 text = "Score: 0"
 label_settings = SubResource("LabelSettings_vutra")
 
+[node name="KillPlane" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillPlane"]
+transform = Transform3D(10000, 0, 0, 0, 10000, 0, 0, 0, 10000, 0, 5, 0)
+shape = SubResource("WorldBoundaryShape3D_v70ln")
+
 [connection signal="mob_spawned" from="MobSpawner3D" to="." method="_on_mob_spawner_3d_mob_spawned"]
+[connection signal="body_entered" from="KillPlane" to="." method="_on_kill_plane_body_entered"]
