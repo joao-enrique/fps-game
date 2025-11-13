@@ -58,7 +58,7 @@ Siga as etapas abaixo para executar o projeto localmente:
 
 ```bash
 # Clone este repositório
-git clone https://github.com/joao-enrique/RPG-game.git
+git clone https://github.com/joao-enrique/fps-game.git
 ```
 E abra o projeto na godot
 > 💡 Caso não tenha o Godot engine instalado, procure no google e siga os passos para sua instalação.
